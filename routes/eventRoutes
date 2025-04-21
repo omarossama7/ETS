@@ -3,6 +3,7 @@ const router = express.Router();
 const eventController = require('../controllers/eventController');
 const { protect, authorize } = require('../middleware/authMiddleware');
 
+
 // Public
 router.get('/events', eventController.getAllEvents); //tested
 router.get('/events/:id', eventController.getEventById); //tested
