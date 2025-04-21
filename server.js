@@ -1,11 +1,11 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
 const userRoutes = require('./routes/userRoutes');
 const connectDB = require('./config/db');
 const app = express();
 
-dotenv.config();
 connectDB();
 
 app.use(express.json());
