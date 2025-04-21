@@ -11,6 +11,7 @@ const EventSchema = new mongoose.Schema({
     totalTickets: { type: Number, required: true },
     remainingTickets: { type: Number, required: true },
     organizer: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    status: { type: String, enum: ['approved', 'pending', 'declined'], default: 'pending' }
 }, { timestamps: true });
 
 module.exports = mongoose.model('Event', EventSchema);
